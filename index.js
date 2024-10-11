@@ -20,8 +20,8 @@ cal.addEventListener("click",function(){
         bmi = (weight / height ** 2); 
         afterFixed = bmi.toFixed();
         var p = document.createElement("p");
-        p.classList="output"
-        parentDiv.style.height="420px"
+        p.className ="output";
+        parentDiv.style.height="420px";
         innerDiv.appendChild(p);
         // Using if-else for BMI category check
         if (bmi >= 30) {
@@ -45,6 +45,21 @@ cal.addEventListener("click",function(){
 }
 })
 
+gsap.set("body", { overflow: "hidden" });
+var t1 = gsap.timeline();
+t1.from("#parentDiv",{
+    x:-700,
+    duration:3,
+    delay:1,
+} , "<")
+t1.from("#innerDiv",{
+y:700,
+    duration:3,
+} , "<")
+t1.from(".output",{
+    x:40,
+    duration:2,
+})
 
 
 
