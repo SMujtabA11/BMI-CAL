@@ -20,7 +20,7 @@ cal.addEventListener("click",function(){
         bmi = (weight / height ** 2); 
         afterFixed = bmi.toFixed();
         var p = document.createElement("p");
-        p.className ="output";
+        p.classList ="output";
         parentDiv.style.height="420px";
         innerDiv.appendChild(p);
         // Using if-else for BMI category check
@@ -41,6 +41,7 @@ cal.addEventListener("click",function(){
         winput.addEventListener("click",function(){
             p.innerText='';
             parentDiv.style.height="400px"
+            p.style.padding="0px"
         })
 }
 })
@@ -56,10 +57,7 @@ t1.from("#innerDiv",{
 y:700,
     duration:3,
 } , "<")
-t1.from(".output",{
-    x:40,
-    duration:2,
-})
+
 
 
 
