@@ -49,3 +49,9 @@ button{
     font-family: "Teko";
     font-size: 20px;
 }
+.output{
+    color: red;
+    padding: 10px;
+    font-family: "Teko";
+    font-size: 20px;
+}
